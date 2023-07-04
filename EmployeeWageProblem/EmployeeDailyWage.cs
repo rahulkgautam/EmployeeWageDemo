@@ -19,21 +19,22 @@ namespace EmployeeWageProblem
             for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
             {
                 Random random = new Random();
-            int empCheck = random.Next(3);
-            switch (empCheck) {
-                case IS_FULL_TIME:
-                    empHour = 8;
-                    break;
-                case IS_PART_TIME:
-                    empHour = 4;
-                    break;
-                default:
-                    empHour = 0;
-                    break;
-            }
-            empWage = empHour * EMP_RAT_PER_HOUR;
-            Console.WriteLine("Employee Wage :" + empWage);
-            totalEmpWage += empWage;
+                int empCheck = random.Next(3);
+                switch (empCheck)
+                {
+                    case IS_FULL_TIME:
+                        empHour = 8;
+                        break;
+                    case IS_PART_TIME:
+                        empHour = 4;
+                        break;
+                    default:
+                        empHour = 0;
+                        break;
+                }
+                empWage = empHour * EMP_RAT_PER_HOUR;
+                Console.WriteLine("Employee Wage :" + empWage);
+                totalEmpWage += empWage;
             }
             Console.WriteLine("Total EmpWage :" + totalEmpWage);
         }
